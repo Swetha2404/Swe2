@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Light Control</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            transition: background-color 0.5s ease;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+        }
+        .relax { background-color: #6fa3ef; }
+        .focus { background-color: #f3b431; }
+        .party { background-color: #ff4d6d; }
+    </style>
+</head>
+<body>
+    <h1> Mood Light Control</h1>
+    <div class="buttons">
+        <button class="relax" onclick="changeMood('#6fa3ef')">Relax</button>
+        <button class="focus" onclick="changeMood('#f3b431')">Focus</button>
+        <button class="party" onclick="changeMood('#ff4d6d')">Party</button>
+    </div>
+
+    <script>
+        function changeMood(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
